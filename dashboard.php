@@ -1,6 +1,3 @@
-<?php
-        include './template/config.php';
-?>
 
 <html>
     <title>Invoice Demo</title>
@@ -10,6 +7,6 @@
             <script src="./js/bootstrap.min.js"></script>
     </head>
     <body>
-                
+    <?php include './template/navbar.php' ?>         
     </body>
 </html>
