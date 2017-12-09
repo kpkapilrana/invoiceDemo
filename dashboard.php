@@ -1,4 +1,12 @@
 
+<?php
+    session_start();
+    if(!isset($_SESSION['user_session'])){
+        header("Location:index.php");
+    }
+
+    include_once './template/config.php';
+?>
 <html>
     <title>Invoice Demo</title>
     <head>
@@ -7,6 +15,11 @@
             <script src="./js/bootstrap.min.js"></script>
     </head>
     <body>
-    <?php include './template/navbar.php' ?>         
+    
+    <div class="container">  
+        <?php include './template/navbar.php' ?> 
+        <strong>Hello , <?php echo $_SESSION['user_name'] ?></strong>      
+        Welcome to the Member Page
+        </div>
     </body>
 </html>
